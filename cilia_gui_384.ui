@@ -1,0 +1,2681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CiliaC</class>
+ <widget class="QMainWindow" name="CiliaC">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1173</width>
+    <height>666</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">CiliaC</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../.designer/backup/images/summed.ico</normaloff>../../../.designer/backup/images/summed.ico</iconset>
+  </property>
+  <property name="accessibleName">
+   <string notr="true">CiliaC</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="GraphicsView" name="view1GraphicsView">
+    <property name="geometry">
+     <rect>
+      <x>316</x>
+      <y>33</y>
+      <width>384</width>
+      <height>384</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>255</height>
+     </size>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="buttonRedraw">
+    <property name="geometry">
+     <rect>
+      <x>1015</x>
+      <y>424</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Refresh Image</string>
+    </property>
+    <property name="text">
+     <string>Redraw</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>images/view-refresh.png</normaloff>images/view-refresh.png</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonPrevImage">
+    <property name="geometry">
+     <rect>
+      <x>591</x>
+      <y>430</y>
+      <width>31</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Previous frame</string>
+    </property>
+    <property name="text">
+     <string>&lt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonNextImage">
+    <property name="geometry">
+     <rect>
+      <x>806</x>
+      <y>430</y>
+      <width>31</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Next Frame</string>
+    </property>
+    <property name="text">
+     <string>&gt;</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="buttonAnimateStart">
+    <property name="geometry">
+     <rect>
+      <x>696</x>
+      <y>446</y>
+      <width>41</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Start Animation</string>
+    </property>
+    <property name="statusTip">
+     <string/>
+    </property>
+    <property name="text">
+     <string>Animate</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>images/media-playback-start.png</normaloff>images/media-playback-start.png</iconset>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QSlider" name="imageSlider">
+    <property name="geometry">
+     <rect>
+      <x>625</x>
+      <y>430</y>
+      <width>171</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Scroll Frames</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="buttonRotateLeft">
+    <property name="geometry">
+     <rect>
+      <x>935</x>
+      <y>424</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Rotate Left</string>
+    </property>
+    <property name="text">
+     <string>RL</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>images/object-rotate-left.png</normaloff>images/object-rotate-left.png</iconset>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="buttonRotateRight">
+    <property name="geometry">
+     <rect>
+      <x>970</x>
+      <y>424</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Rotate Right</string>
+    </property>
+    <property name="text">
+     <string>RR</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>images/object-rotate-right.png</normaloff>images/object-rotate-right.png</iconset>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="buttonSmooth">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>112</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Apply Smoothing</string>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>images/view-object-histogram-logarithmic.png</normaloff>images/view-object-histogram-logarithmic.png</iconset>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="buttonLoadFile">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Load Dataset</string>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>images/document-open-data.png</normaloff>images/document-open-data.png</iconset>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="buttonExit">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>550</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Exit</string>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>images/application-exit.png</normaloff>images/application-exit.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonCentreOfMass">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>340</y>
+      <width>91</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>Calculate Centre of Mass</string>
+    </property>
+    <property name="text">
+     <string>Calc COM</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="buttonSummedImage">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>112</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Show summed image</string>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>images/summed.png</normaloff>images/summed.png</iconset>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="progressLog">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>484</y>
+      <width>516</width>
+      <height>121</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="buttonRender">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>148</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Plot Image in 3D</string>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>images/ssurf-plot.png</normaloff>images/ssurf-plot.png</iconset>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="buttonVHPlot">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>148</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Graph vertical and lateral movement</string>
+    </property>
+    <property name="text">
+     <string>plotVirtHor</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>images/combined_graph.png</normaloff>images/combined_graph.png</iconset>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxUnits">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>80</y>
+      <width>131</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Units</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <widget class="QRadioButton" name="radioButtonFrames">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Change units to Pixels and Frames</string>
+     </property>
+     <property name="text">
+      <string>pixels/frames</string>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButtonTime">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>97</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Change units to mm and Seconds</string>
+     </property>
+     <property name="text">
+      <string>mm/time</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QCheckBox" name="buttonShowOverlays">
+    <property name="geometry">
+     <rect>
+      <x>335</x>
+      <y>440</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Show Centre of Mass position</string>
+    </property>
+    <property name="text">
+     <string>Show Overlays</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="GraphicsView" name="view2GraphicsView">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>33</y>
+      <width>384</width>
+      <height>384</height>
+     </rect>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinFrom">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>242</y>
+      <width>52</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Start frame for COM</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelFrom">
+    <property name="geometry">
+     <rect>
+      <x>155</x>
+      <y>250</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>From</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTo">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>290</y>
+      <width>21</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>To</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinTo">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>280</y>
+      <width>52</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>End frame for COM</string>
+    </property>
+    <property name="maximum">
+     <number>999</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="view1Title">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>10</y>
+      <width>151</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="view2Title">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>10</y>
+      <width>151</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxCOM">
+    <property name="geometry">
+     <rect>
+      <x>-1</x>
+      <y>240</y>
+      <width>141</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QRadioButton" name="radioCOMFrame">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>Measure COM using the whole frame</string>
+     </property>
+     <property name="text">
+      <string>Whole Frame</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioCOMInside">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>32</y>
+       <width>97</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Measure COM inside a fixed ROI</string>
+     </property>
+     <property name="text">
+      <string>Inside ROI</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioCOMPeak">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>56</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Mesaure COM with a moving ROI</string>
+     </property>
+     <property name="text">
+      <string>Track Peak</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>210</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Tracking</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelFrameNumber">
+    <property name="geometry">
+     <rect>
+      <x>705</x>
+      <y>372</y>
+      <width>41</width>
+      <height>37</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonCalcVelocity">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>340</y>
+      <width>91</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Calc Velocity</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonProcessProceed">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>145</x>
+      <y>396</y>
+      <width>94</width>
+      <height>77</height>
+     </rect>
+    </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>192</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Light">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>33</red>
+          <green>255</green>
+          <blue>33</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Midlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>16</red>
+          <green>223</green>
+          <blue>16</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Dark">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>96</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Mid">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>128</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Text">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="BrightText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ButtonText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>192</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Shadow">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="AlternateBase">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>127</red>
+          <green>223</green>
+          <blue>127</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ToolTipBase">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>220</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ToolTipText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>192</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Light">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>33</red>
+          <green>255</green>
+          <blue>33</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Midlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>16</red>
+          <green>223</green>
+          <blue>16</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Dark">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>96</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Mid">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>128</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Text">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="BrightText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ButtonText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>192</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Shadow">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="AlternateBase">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>127</red>
+          <green>223</green>
+          <blue>127</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ToolTipBase">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>220</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ToolTipText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>96</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>192</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Light">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>33</red>
+          <green>255</green>
+          <blue>33</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Midlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>16</red>
+          <green>223</green>
+          <blue>16</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Dark">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>96</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Mid">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>128</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Text">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>96</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="BrightText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ButtonText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>96</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>192</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>192</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Shadow">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="AlternateBase">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>192</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ToolTipBase">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>220</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ToolTipText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>Rotate Images</string>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>Proceed</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonProcessCancel">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>396</y>
+      <width>94</width>
+      <height>77</height>
+     </rect>
+    </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Light">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>127</green>
+          <blue>127</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Midlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>63</green>
+          <blue>63</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Dark">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>127</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Mid">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>170</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Text">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="BrightText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ButtonText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Shadow">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="AlternateBase">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>127</green>
+          <blue>127</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ToolTipBase">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>220</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ToolTipText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Light">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>127</green>
+          <blue>127</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Midlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>63</green>
+          <blue>63</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Dark">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>127</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Mid">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>170</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Text">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="BrightText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ButtonText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Shadow">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="AlternateBase">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>127</green>
+          <blue>127</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ToolTipBase">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>220</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ToolTipText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>127</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Light">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>127</green>
+          <blue>127</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Midlight">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>63</green>
+          <blue>63</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Dark">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>127</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Mid">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>170</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Text">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>127</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="BrightText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ButtonText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>127</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Shadow">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="AlternateBase">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ToolTipBase">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>220</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="ToolTipText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>Rotate Images</string>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>Cancel</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="buttonSaveFile">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>40</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Save Dataset</string>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>images/document-save.png</normaloff>images/document-save.png</iconset>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="buttonSaveReport">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>72</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Save a report as PDF</string>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>images/acrobat.png</normaloff>images/acrobat.png</iconset>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="buttonSaveAsCSV">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>72</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Save a data as CSV</string>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>images/excel.png</normaloff>images/excel.png</iconset>
+    </property>
+   </widget>
+   <widget class="QSlider" name="view1SliderMin">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>116</y>
+      <width>23</width>
+      <height>160</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Anterior Brightness Min</string>
+    </property>
+    <property name="maximum">
+     <number>1024</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="sliderPosition">
+     <number>0</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="view1SliderMax">
+    <property name="geometry">
+     <rect>
+      <x>715</x>
+      <y>116</y>
+      <width>23</width>
+      <height>160</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Anterior Brightness Max</string>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>512</number>
+    </property>
+    <property name="value">
+     <number>512</number>
+    </property>
+    <property name="sliderPosition">
+     <number>512</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="view2SliderMin">
+    <property name="geometry">
+     <rect>
+      <x>1135</x>
+      <y>120</y>
+      <width>23</width>
+      <height>160</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Lateral Brightness Min</string>
+    </property>
+    <property name="maximum">
+     <number>1024</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="view2SliderMax">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>120</y>
+      <width>23</width>
+      <height>160</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Lateral Brightness Max</string>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>512</number>
+    </property>
+    <property name="value">
+     <number>512</number>
+    </property>
+    <property name="sliderPosition">
+     <number>512</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="view1BCAutoCheckbox">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>88</y>
+      <width>26</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="view1BCAutoLabel">
+    <property name="geometry">
+     <rect>
+      <x>705</x>
+      <y>70</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Auto</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="view2BCAutoLabel">
+    <property name="geometry">
+     <rect>
+      <x>1135</x>
+      <y>70</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Auto</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="view2BCAutoCheckbox">
+    <property name="geometry">
+     <rect>
+      <x>1140</x>
+      <y>88</y>
+      <width>26</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QSlider" name="animDelaySlider">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>39</x>
+      <y>488</y>
+      <width>196</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>10</number>
+    </property>
+    <property name="maximum">
+     <number>750</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1173</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <widget class="QMenu" name="menuCreate_Report">
+     <property name="toolTip">
+      <string>Create a PDF Summary</string>
+     </property>
+     <property name="title">
+      <string>Create Report</string>
+     </property>
+     <addaction name="actionReport_Both"/>
+     <addaction name="actionReport_Anterior"/>
+     <addaction name="actionReport_Lateral"/>
+    </widget>
+    <addaction name="actionLoad_Dicom_File"/>
+    <addaction name="actionSave_Dicom_File"/>
+    <addaction name="menuCreate_Report"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menu_Image">
+    <property name="title">
+     <string>&amp;Image</string>
+    </property>
+    <widget class="QMenu" name="menuRotate">
+     <property name="title">
+      <string>Rotate</string>
+     </property>
+     <addaction name="actionRotate_Using_ROI"/>
+     <addaction name="actionRotate_90_Deg_Left"/>
+     <addaction name="actionRotate_90_Deg_Right"/>
+     <addaction name="actionRotate_Set_Lateral_Angle"/>
+    </widget>
+    <addaction name="actionDICOM_Info"/>
+    <addaction name="menuRotate"/>
+    <addaction name="actionSmooth"/>
+    <addaction name="actionScale"/>
+    <addaction name="actionReload_data"/>
+    <addaction name="actionRemove_Background"/>
+    <addaction name="actionMask_Frames"/>
+    <addaction name="actionImageWindow"/>
+   </widget>
+   <widget class="QMenu" name="menuPlot">
+    <property name="title">
+     <string>Plot</string>
+    </property>
+    <widget class="QMenu" name="menuPrint">
+     <property name="title">
+      <string>Print</string>
+     </property>
+     <addaction name="actionSummary"/>
+     <addaction name="actionLateral_Movement"/>
+     <addaction name="actionVirtical_Movement_2"/>
+    </widget>
+    <addaction name="action3D_Mesh"/>
+    <addaction name="actionXYPlots"/>
+    <addaction name="actionClose_Plots"/>
+    <addaction name="menuPrint"/>
+    <addaction name="actionChange_Units"/>
+    <addaction name="actionFit_Line"/>
+    <addaction name="actionStraighten"/>
+    <addaction name="actionExport"/>
+   </widget>
+   <widget class="QMenu" name="menuMeasure">
+    <property name="title">
+     <string>Measure</string>
+    </property>
+    <addaction name="actionVelocity_Limits"/>
+    <addaction name="actionCalcVelocity"/>
+    <addaction name="actionMeasure_Size_Inside_ROI"/>
+    <addaction name="separator"/>
+    <addaction name="actionAnalyse_Calibration_Image"/>
+    <addaction name="actionMeasureROI_Position"/>
+   </widget>
+   <widget class="QMenu" name="menuTrack">
+    <property name="title">
+     <string>Track</string>
+    </property>
+    <widget class="QMenu" name="menuMask">
+     <property name="title">
+      <string>Mask</string>
+     </property>
+     <addaction name="actionAdd_Mask"/>
+     <addaction name="actionApply_Mask"/>
+     <addaction name="actionRemove_Mask"/>
+    </widget>
+    <widget class="QMenu" name="menuISO">
+     <property name="title">
+      <string>ISO</string>
+     </property>
+     <addaction name="actionTrack_ISO_Add"/>
+     <addaction name="actionTrack_ISO_Display"/>
+     <addaction name="actionTrack_ISO_Scale"/>
+     <addaction name="actionTrack_ISO_Threshold"/>
+    </widget>
+    <widget class="QMenu" name="menuTrack_Manual">
+     <property name="title">
+      <string>Manual</string>
+     </property>
+     <widget class="QMenu" name="menuTrack_Movement">
+      <property name="title">
+       <string>Movement</string>
+      </property>
+      <addaction name="actionTrackMovement_Active"/>
+      <addaction name="actionTrackMovement_Start"/>
+      <addaction name="actionTrackMovement_Stop"/>
+      <addaction name="actionTrackMovement_Remove_Current"/>
+      <addaction name="actionTrackMovement_Remove_All"/>
+     </widget>
+     <widget class="QMenu" name="menuTrack_Spiral">
+      <property name="title">
+       <string>Spiral</string>
+      </property>
+      <addaction name="actionTrackSpiral_Active"/>
+      <addaction name="actionTrackSpiral_Start"/>
+      <addaction name="actionTrackSpiral_Stop"/>
+      <addaction name="actionTrackSpiral_Remove_Current"/>
+      <addaction name="actionTrackSpiral_Remove_All"/>
+     </widget>
+     <addaction name="menuTrack_Movement"/>
+     <addaction name="menuTrack_Spiral"/>
+    </widget>
+    <widget class="QMenu" name="menuTrack_Auto">
+     <property name="title">
+      <string>Auto</string>
+     </property>
+     <widget class="QMenu" name="menuTrack_No_ROI">
+      <property name="title">
+       <string>Whole Frame</string>
+      </property>
+      <addaction name="actionTrackNoROI_Active"/>
+      <addaction name="actionTrackNoROI_Calc_COM"/>
+      <addaction name="actionTrackNoROI_Remove_COM"/>
+     </widget>
+     <widget class="QMenu" name="menuTrack_Fixed_ROI">
+      <property name="title">
+       <string>Fixed ROI</string>
+      </property>
+      <addaction name="actionTrackFixedROI_Active"/>
+      <addaction name="actionTrackFixedROI_Add_ROI"/>
+      <addaction name="actionTrackFixedROI_Calc_COM"/>
+      <addaction name="actionTrackFixedROI_Remove_ROI"/>
+      <addaction name="actionTrackFixedROI_Remove_COM"/>
+     </widget>
+     <widget class="QMenu" name="menuTrack_Moving_ROI">
+      <property name="title">
+       <string>Moving ROI</string>
+      </property>
+      <addaction name="actionTrackMovingROI_Active"/>
+      <addaction name="actionTrackMovingROI_Add_ROI"/>
+      <addaction name="actionTrackMovingROI_Calc_COM"/>
+      <addaction name="actionTrackMovingROI_Remove_ROI"/>
+      <addaction name="actionTrackMovingROI_Remove_COM"/>
+     </widget>
+     <addaction name="menuTrack_No_ROI"/>
+     <addaction name="menuTrack_Fixed_ROI"/>
+     <addaction name="menuTrack_Moving_ROI"/>
+    </widget>
+    <addaction name="menuTrack_Auto"/>
+    <addaction name="menuTrack_Manual"/>
+    <addaction name="separator"/>
+    <addaction name="actionAdd_ROI"/>
+    <addaction name="actionDelete_ROI"/>
+    <addaction name="actionReset_Limits"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="menuMask"/>
+    <addaction name="actionTrackThreshold_ROI"/>
+    <addaction name="menuISO"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionHelpAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuSet">
+    <property name="title">
+     <string>Set</string>
+    </property>
+    <widget class="QMenu" name="menuTracking">
+     <property name="title">
+      <string>Tracking</string>
+     </property>
+     <addaction name="actionTrackThreshold"/>
+     <addaction name="actionTrackBins"/>
+    </widget>
+    <widget class="QMenu" name="menu3D_Plot">
+     <property name="title">
+      <string>3D Plot</string>
+     </property>
+     <addaction name="action3dZ_scale"/>
+    </widget>
+    <widget class="QMenu" name="menuLog_Level">
+     <property name="title">
+      <string>Log Level</string>
+     </property>
+     <addaction name="actionSetLogInfo"/>
+     <addaction name="actionSetLogWarning"/>
+     <addaction name="actionSetLogDebug"/>
+    </widget>
+    <addaction name="actionSet_Animation_Speed"/>
+    <addaction name="actionPlot_Size"/>
+    <addaction name="menuTracking"/>
+    <addaction name="menu3D_Plot"/>
+    <addaction name="actionSet_Summed_Sensitivity"/>
+    <addaction name="actionSet_Preprocess_image_on_Load"/>
+    <addaction name="menuLog_Level"/>
+    <addaction name="actionSetPixel_Size"/>
+    <addaction name="actionSetReset_Zoom"/>
+   </widget>
+   <widget class="QMenu" name="menuManual">
+    <property name="title">
+     <string>Manual</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionManual_Start"/>
+    <addaction name="actionManual_Stop"/>
+    <addaction name="actionManual_Clear"/>
+    <addaction name="separator"/>
+    <addaction name="actionManual_Calc_Velocity"/>
+    <addaction name="actionManual_Plot"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionView_No_ROI"/>
+    <addaction name="actionView_Fixed_ROI"/>
+    <addaction name="actionView_Moving_ROI"/>
+    <addaction name="actionView_Movement"/>
+    <addaction name="actionView_Spiral"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menu_Image"/>
+   <addaction name="menuTrack"/>
+   <addaction name="menuView"/>
+   <addaction name="menuManual"/>
+   <addaction name="menuPlot"/>
+   <addaction name="menuMeasure"/>
+   <addaction name="menuSet"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionDICOM_Info">
+   <property name="text">
+    <string>DICOM Info</string>
+   </property>
+   <property name="toolTip">
+    <string>Display DICOM Information</string>
+   </property>
+  </action>
+  <action name="actionRotate_L">
+   <property name="text">
+    <string>Rotate L</string>
+   </property>
+   <property name="toolTip">
+    <string>Rotate Left</string>
+   </property>
+  </action>
+  <action name="actionRotate_R">
+   <property name="text">
+    <string>Rotate R</string>
+   </property>
+   <property name="toolTip">
+    <string>Rotate Right</string>
+   </property>
+  </action>
+  <action name="actionSmooth">
+   <property name="text">
+    <string>Smooth</string>
+   </property>
+  </action>
+  <action name="action3D_Mesh">
+   <property name="text">
+    <string>3D Mesh</string>
+   </property>
+  </action>
+  <action name="actionXYPlots">
+   <property name="text">
+    <string>X and Y</string>
+   </property>
+  </action>
+  <action name="actionInside_ROI">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Inside ROI</string>
+   </property>
+  </action>
+  <action name="actionROI_Peak">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>ROI Peak</string>
+   </property>
+  </action>
+  <action name="actionScale">
+   <property name="text">
+    <string>Scale</string>
+   </property>
+  </action>
+  <action name="actionReload_data">
+   <property name="text">
+    <string>Reload data</string>
+   </property>
+  </action>
+  <action name="actionRemove_Background">
+   <property name="text">
+    <string>Remove Background</string>
+   </property>
+  </action>
+  <action name="actionChange_Units">
+   <property name="text">
+    <string>Change Units</string>
+   </property>
+  </action>
+  <action name="actionPrint_Virt">
+   <property name="text">
+    <string>Print Virt</string>
+   </property>
+  </action>
+  <action name="actionPrint_Horiz">
+   <property name="text">
+    <string>Print Horiz</string>
+   </property>
+  </action>
+  <action name="actionFit_Line">
+   <property name="text">
+    <string>Fit Line</string>
+   </property>
+  </action>
+  <action name="actionStraighten">
+   <property name="text">
+    <string>Straighten</string>
+   </property>
+   <property name="toolTip">
+    <string>Straighten data</string>
+   </property>
+  </action>
+  <action name="actionExport">
+   <property name="text">
+    <string>Export</string>
+   </property>
+  </action>
+  <action name="actionVelocity_Limits">
+   <property name="text">
+    <string>Velocity Limits</string>
+   </property>
+  </action>
+  <action name="actionCalcVelocity">
+   <property name="text">
+    <string>Calculate Velocity</string>
+   </property>
+  </action>
+  <action name="actionHelpAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionMask_Frames">
+   <property name="text">
+    <string>Mask Frames</string>
+   </property>
+  </action>
+  <action name="actionAdd_Mask">
+   <property name="text">
+    <string>Add Mask</string>
+   </property>
+  </action>
+  <action name="actionApply_Mask">
+   <property name="text">
+    <string>Apply Mask</string>
+   </property>
+  </action>
+  <action name="actionRemove_Mask">
+   <property name="text">
+    <string>Remove Mask</string>
+   </property>
+  </action>
+  <action name="actionAdd_ROI">
+   <property name="text">
+    <string>Add ROI</string>
+   </property>
+  </action>
+  <action name="actionDelete_ROI">
+   <property name="text">
+    <string>Delete ROI</string>
+   </property>
+  </action>
+  <action name="actionEntire_Frame">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Entire Frame</string>
+   </property>
+  </action>
+  <action name="actionReset_Limits">
+   <property name="text">
+    <string>Reset Limits</string>
+   </property>
+  </action>
+  <action name="actionSummary">
+   <property name="text">
+    <string>Summary</string>
+   </property>
+  </action>
+  <action name="actionLateral_Movement">
+   <property name="text">
+    <string>Lateral Movement</string>
+   </property>
+  </action>
+  <action name="actionVirtical_Movement_2">
+   <property name="text">
+    <string>Virtical Movement</string>
+   </property>
+  </action>
+  <action name="actionPlot_Size">
+   <property name="text">
+    <string>Plot Size</string>
+   </property>
+  </action>
+  <action name="actionSet_Animation_Speed">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Animation Speed</string>
+   </property>
+  </action>
+  <action name="actionAnalyse_Calibration_Image">
+   <property name="text">
+    <string>Analyse Calibration Image</string>
+   </property>
+  </action>
+  <action name="actionTrackThreshold">
+   <property name="text">
+    <string>Threshold</string>
+   </property>
+  </action>
+  <action name="actionTrackBins">
+   <property name="text">
+    <string>Bins</string>
+   </property>
+  </action>
+  <action name="action3dZ_scale">
+   <property name="text">
+    <string>Z scale</string>
+   </property>
+  </action>
+  <action name="actionLoad_Dicom_File">
+   <property name="text">
+    <string>Load Dicom File</string>
+   </property>
+  </action>
+  <action name="actionSave_Dicom_File">
+   <property name="text">
+    <string>Save Dicom File</string>
+   </property>
+  </action>
+  <action name="actionRotate_Lat">
+   <property name="text">
+    <string>Rotate Lat</string>
+   </property>
+  </action>
+  <action name="actionRotate_Using_ROI">
+   <property name="text">
+    <string>Using ROI</string>
+   </property>
+  </action>
+  <action name="actionRotate_90_Deg_Left">
+   <property name="text">
+    <string>90 Deg Left</string>
+   </property>
+  </action>
+  <action name="actionRotate_90_Deg_Right">
+   <property name="text">
+    <string>90 Deg Right</string>
+   </property>
+  </action>
+  <action name="actionRotate_Set_Lateral_Angle">
+   <property name="text">
+    <string>Set Lateral Angle</string>
+   </property>
+  </action>
+  <action name="actionSet_Summed_Sensitivity">
+   <property name="text">
+    <string>Summed Sensitivity</string>
+   </property>
+  </action>
+  <action name="actionSet_Preprocess_image_on_Load">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Preprocess image on Load</string>
+   </property>
+  </action>
+  <action name="actionMeasure_Size_Inside_ROI">
+   <property name="text">
+    <string>Size Inside ROI</string>
+   </property>
+  </action>
+  <action name="actionSetLogInfo">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Info</string>
+   </property>
+  </action>
+  <action name="actionSetLogWarning">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Warning</string>
+   </property>
+  </action>
+  <action name="actionSetLogDebug">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Debug</string>
+   </property>
+  </action>
+  <action name="actionReport_Anterior">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Anterior Only</string>
+   </property>
+  </action>
+  <action name="actionReport_Lateral">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Lateral Only</string>
+   </property>
+  </action>
+  <action name="actionReport_Both">
+   <property name="text">
+    <string>Both</string>
+   </property>
+  </action>
+  <action name="actionSetPixel_Size">
+   <property name="text">
+    <string>Pixel Size</string>
+   </property>
+  </action>
+  <action name="actionImageWindow">
+   <property name="text">
+    <string>Window</string>
+   </property>
+  </action>
+  <action name="actionMeasureROI_Position">
+   <property name="text">
+    <string>ROI Position</string>
+   </property>
+  </action>
+  <action name="actionTrackThreshold_ROI">
+   <property name="text">
+    <string>Isocurve ROI</string>
+   </property>
+  </action>
+  <action name="actionTrack_ISO_Add">
+   <property name="text">
+    <string>Add</string>
+   </property>
+  </action>
+  <action name="actionTrack_ISO_Display">
+   <property name="text">
+    <string>Display</string>
+   </property>
+  </action>
+  <action name="actionTrack_ISO_Scale">
+   <property name="text">
+    <string>Scale</string>
+   </property>
+  </action>
+  <action name="actionTrack_ISO_Threshold">
+   <property name="text">
+    <string>Threshold</string>
+   </property>
+  </action>
+  <action name="actionTrack_Manual_Start">
+   <property name="text">
+    <string>Start</string>
+   </property>
+  </action>
+  <action name="actionTrack_Manual_Stop">
+   <property name="text">
+    <string>Stop</string>
+   </property>
+  </action>
+  <action name="actionTrack_Manual_Plot">
+   <property name="text">
+    <string>Plot</string>
+   </property>
+  </action>
+  <action name="actionTrack_Manual_Calc_Velocity">
+   <property name="text">
+    <string>Calc Velocity</string>
+   </property>
+  </action>
+  <action name="actionManual_Start">
+   <property name="text">
+    <string>Start</string>
+   </property>
+  </action>
+  <action name="actionManual_Stop">
+   <property name="text">
+    <string>Stop</string>
+   </property>
+  </action>
+  <action name="actionManual_Clear">
+   <property name="text">
+    <string>Clear</string>
+   </property>
+  </action>
+  <action name="actionManual_Calc_Velocity">
+   <property name="text">
+    <string>Calc Velocity</string>
+   </property>
+  </action>
+  <action name="actionManual_Plot">
+   <property name="text">
+    <string>Plot</string>
+   </property>
+  </action>
+  <action name="actionManual_COM">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>COM</string>
+   </property>
+  </action>
+  <action name="actionManual_Spiral">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Spiral</string>
+   </property>
+  </action>
+  <action name="actionTrackNoROI_Active">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Active</string>
+   </property>
+  </action>
+  <action name="actionTrackFixedROI_Active">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Active</string>
+   </property>
+  </action>
+  <action name="actionTrackMovingROI_Active">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Active</string>
+   </property>
+  </action>
+  <action name="actionTrackMovement_Active">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Active</string>
+   </property>
+  </action>
+  <action name="actionTrackSpiral_Active">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Active</string>
+   </property>
+  </action>
+  <action name="actionTrackNoROI_Calc_COM">
+   <property name="text">
+    <string>Calc COM</string>
+   </property>
+  </action>
+  <action name="actionTrackNoROI_Remove_COM">
+   <property name="text">
+    <string>Remove COM</string>
+   </property>
+  </action>
+  <action name="actionTrackFixedROI_Add_ROI">
+   <property name="text">
+    <string>Add ROI</string>
+   </property>
+  </action>
+  <action name="actionTrackFixedROI_Calc_COM">
+   <property name="text">
+    <string>Calc COM</string>
+   </property>
+  </action>
+  <action name="actionTrackFixedROI_Remove_ROI">
+   <property name="text">
+    <string>Remove ROI</string>
+   </property>
+  </action>
+  <action name="actionTrackFixedROI_Remove_COM">
+   <property name="text">
+    <string>Remove COM</string>
+   </property>
+  </action>
+  <action name="actionTrackMovingROI_Add_ROI">
+   <property name="text">
+    <string>Add ROI</string>
+   </property>
+  </action>
+  <action name="actionTrackMovingROI_Calc_COM">
+   <property name="text">
+    <string>Calc COM</string>
+   </property>
+  </action>
+  <action name="actionTrackMovingROI_Remove_ROI">
+   <property name="text">
+    <string>Remove ROI</string>
+   </property>
+  </action>
+  <action name="actionTrackMovingROI_Remove_COM">
+   <property name="text">
+    <string>Remove COM</string>
+   </property>
+  </action>
+  <action name="actionTrackMovement_Start">
+   <property name="text">
+    <string>Start</string>
+   </property>
+  </action>
+  <action name="actionTrackMovement_Stop">
+   <property name="text">
+    <string>Stop</string>
+   </property>
+  </action>
+  <action name="actionTrackMovement_Remove_Current">
+   <property name="text">
+    <string>Remove Current</string>
+   </property>
+  </action>
+  <action name="actionTrackMovement_Remove_All">
+   <property name="text">
+    <string>Remove All</string>
+   </property>
+  </action>
+  <action name="actionTrackSpiral_Start">
+   <property name="text">
+    <string>Start</string>
+   </property>
+  </action>
+  <action name="actionTrackSpiral_Stop">
+   <property name="text">
+    <string>Stop</string>
+   </property>
+  </action>
+  <action name="actionTrackSpiral_Remove_Current">
+   <property name="text">
+    <string>Remove Current</string>
+   </property>
+  </action>
+  <action name="actionTrackSpiral_Remove_All">
+   <property name="text">
+    <string>Remove All</string>
+   </property>
+  </action>
+  <action name="actionView_No_ROI">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Whole Frame</string>
+   </property>
+  </action>
+  <action name="actionView_Fixed_ROI">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Inside ROI</string>
+   </property>
+  </action>
+  <action name="actionView_Moving_ROI">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Track Peak</string>
+   </property>
+  </action>
+  <action name="actionView_Movement">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Movement</string>
+   </property>
+  </action>
+  <action name="actionView_Spiral">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Spiral</string>
+   </property>
+  </action>
+  <action name="actionClose_Plots">
+   <property name="text">
+    <string>Close Plots</string>
+   </property>
+  </action>
+  <action name="actionSetReset_Zoom">
+   <property name="text">
+    <string>Reset Zoom</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>GraphicsView</class>
+   <extends>QGraphicsView</extends>
+   <header>pyqtgraph.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>CiliaC</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>284</x>
+     <y>198</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonExit</sender>
+   <signal>clicked()</signal>
+   <receiver>CiliaC</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>15</x>
+     <y>356</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>284</x>
+     <y>198</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
